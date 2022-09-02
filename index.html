@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="garden">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Portal Assignment</title>
+    <!-- tailwind css cdn and daisy ui link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    },
+                },
+            },
+            plugins: [
+                {
+                    themes: ["light", "dark", "garden"],
+                },
+            ],
+        }
+    </script>
+</head>
+
+<body>
+    <header class="container mx-auto">
+        <div class="navbar bg-base-100 shadow-lg">
+            <div class="flex-1">
+              <a class="btn btn-ghost normal-case text-xl">Zazeera News</a>
+            </div>
+            <div class="flex-none">
+              <ul class="menu menu-horizontal p-0">
+                <li><a class="text-indigo-600 font-semibold underline decoration-indigo-600 decoration-2">News</a></li>
+                <li><a class="text-gray-400 font-semibold">Blog</a></li>
+              </ul>
+            </div>
+          </div>          
+    </header>
+    <main class="container mx-auto">
+        <div class="divider my-6"></div>
+        <section>
+            <!-- category section -->
+            <div>
+                <ul id="category" class="flex justify-between">
+                    
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+</body>
+
+</html>
