@@ -17,7 +17,7 @@ const showCategories = async (categoryId) => {
         console.log(category);
 
         // destructuring
-        const { title, thumbnail_url, author, details, total_view, image_url } = category;
+        const { title, thumbnail_url, author, details, total_view, _id } = category;
         
         const { img: authorImg, name: authorName } = author;
 
@@ -64,7 +64,7 @@ const showCategories = async (categoryId) => {
                     </svg>                                                            
                   </div>
                   <div class="justify-self-end">
-                    <button>
+                    <button onclick="showNewsDetails('${_id}')" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
@@ -79,3 +79,4 @@ const showCategories = async (categoryId) => {
         categoriesContainer.appendChild(article);
     })
 }
+
