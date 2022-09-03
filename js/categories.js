@@ -29,7 +29,7 @@ const showCategories = async (categoryId, elementName) => {
       // destructuring
       const { title, thumbnail_url, author, details, total_view, _id } = category;
 
-      const { img: authorImg, name: authorName } = author;
+      const { img: authorImg } = author;
 
       const article = document.createElement('article');
       article.innerHTML = `
@@ -44,7 +44,7 @@ const showCategories = async (categoryId, elementName) => {
                     <div class="flex items-center gap-2">
                       <img src=${authorImg} class="w-9 lg:w-11 h-auto rounded-full" alt="">
                     <div>
-                      <h4 class="font-medium text-xs lg:text-sm">${authorName}</h4>
+                      <h4 class="font-medium text-xs lg:text-sm">${author.name === 0 || author.name === null || author.name === '' ? 'No Data Available' : author.name}</h4>
                     </div>
                   </div>
                   <div class="flex items-center gap-2 justify-self-end lg:justify-self-start">
@@ -54,7 +54,7 @@ const showCategories = async (categoryId, elementName) => {
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>                      
                     </div>
-                    <h4 class="font-medium text-xs lg:text-xl">${parseFloat((total_view / 1000).toFixed(2))}M</h4>
+                    <h4 class="font-medium text-xs lg:text-base">${total_view === 0 || total_view === null ? 'No Data Available' : parseFloat((total_view/1000).toFixed(2)) + 'M'}</h4>
                   </div>
                   <div class="flex items-center gap-1">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
