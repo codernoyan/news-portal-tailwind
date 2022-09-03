@@ -12,25 +12,20 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
   <!-- tailwind css cdn link -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- tailwind config -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            clifford: '#da373d',
-          },
-        },
-      },
+  <style>
+    .active{
+      background-color: indianred;
+      padding: 1rem;
+      display: block;
     }
-  </script>
+  </style>
 </head>
 
 <body class="bg-gray-200">
   <!-- navbar start -->
   <header class="container mx-auto flex justify-between items-center my-4 px-2 lg:px-0">
     <div>
-      <h1 class="font-sembold text-2xl"><span class="font-bold bg-indigo-500 text-white p-1">Zazeera</span> News</h1>
+      <h1 class="font-sembold text-2xl"><span class="font-bold bg-indigo-500 text-white p-1 rounded-sm">Zazeera</span> News</h1>
     </div>
     <div>
       <ul class="flex gap-2">

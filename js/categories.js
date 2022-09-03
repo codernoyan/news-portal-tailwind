@@ -9,12 +9,11 @@ const showCategories = async (categoryId, elementName) => {
     const newsCount = document.getElementById('count-news');
     newsCount.innerText = categories.length;
 
-    console.log(categories);
     // sort categories by total views
     categories.sort(function (a, b) {
       return b.total_view - a.total_view;
     })
-    
+
     // show alert message when no news found
     const alertMessage = document.getElementById('alert-message');
     if (categories.length === 0) {
@@ -25,12 +24,12 @@ const showCategories = async (categoryId, elementName) => {
 
     const newsName = document.getElementById('item-name');
     newsName.innerText = elementName.innerText;
+    
 
     // display categories
     const categoriesContainer = document.getElementById('categories');
     categoriesContainer.innerHTML = '';
     categories.forEach(category => {
-      console.log(category);
       // destructuring
       const { title, thumbnail_url, author, details, total_view, _id } = category;
 
@@ -41,7 +40,7 @@ const showCategories = async (categoryId, elementName) => {
             <div class="flex justify-center mb-4">
             <div class="flex flex-col w-full md:flex-row md:max-w-xl lg:max-w-full rounded-lg bg-white shadow-lg">
                 <img class="w-full h-48 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" src=${thumbnail_url} alt="news" />
-                <div class="p-6 flex flex-col justify-start">
+                <div class="p-6 flex flex-col justify-start w-full">
                     <h5 class="text-gray-900 text-sm lg:text-xl font-medium mb-2">${title}</h5>
                     <p class="text-gray-700 text-xs lg:text-base mb-4">${details.slice(0, 350) + '...'}</p>
                     <div class="grid grid-cols-2 lg:grid-cols-4 justify-between items-center">
