@@ -31,12 +31,4 @@ const toggleSpinner = (isLoading) => {
         spinner.classList.add('hidden');
     }
 }
-/* 
-const showCategoryName = async() => {
-    const category = await loadCategoriesMenu();
-    category.forEach(item => {
-        const newName = document.getElementById('item-name');
-        newName.innerHTML = item.category_name;
-    })
-} */
 
