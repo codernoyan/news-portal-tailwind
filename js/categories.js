@@ -8,6 +8,14 @@ const showCategories = async (categoryId, elementName) => {
     // news count
     const newsCount = document.getElementById('count-news');
     newsCount.innerText = categories.length;
+    
+    // show alert message when no news found
+    const alertMessage = document.getElementById('alert-message');
+    if (categories.length === 0) {
+      alertMessage.classList.remove('hidden');
+    } else {
+      alertMessage.classList.add('hidden');
+    }
 
     const newsName = document.getElementById('item-name');
     newsName.innerText = elementName.innerText;
