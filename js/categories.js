@@ -35,26 +35,26 @@ const showCategories = async (categoryId, elementName) => {
       article.innerHTML = `
             <div class="flex justify-center mb-4">
             <div class="flex flex-col w-full md:flex-row md:max-w-xl lg:max-w-full rounded-lg bg-white shadow-lg">
-                <img class="w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" src=${thumbnail_url} alt="news" />
+                <img class="w-full h-48 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" src=${thumbnail_url} alt="news" />
                 <div class="p-6 flex flex-col justify-start">
-                    <h5 class="text-gray-900 text-xl font-medium mb-2">${title}</h5>
-                    <p class="text-gray-700 text-base mb-4">${details.slice(0, 350) + '...'}</p>
+                    <h5 class="text-gray-900 text-sm lg:text-xl font-medium mb-2">${title}</h5>
+                    <p class="text-gray-700 text-xs lg:text-base mb-4">${details.slice(0, 350) + '...'}</p>
                     <div class="grid grid-cols-2 lg:grid-cols-4 justify-between items-center">
 
                     <div class="flex items-center gap-2">
-                      <img src=${authorImg} class="w-11 h-auto rounded-full" alt="">
+                      <img src=${authorImg} class="w-9 lg:w-11 h-auto rounded-full" alt="">
                     <div>
-                      <h4 class="font-medium text-sm">${authorName}</h4>
+                      <h4 class="font-medium text-xs lg:text-sm">${authorName}</h4>
                     </div>
                   </div>
-                  <div class="flex items-center gap-2">
+                  <div class="flex items-center gap-2 justify-self-end lg:justify-self-start">
                     <div>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>                      
                     </div>
-                    <h4 class="font-medium">${parseFloat((total_view / 1000).toFixed(2))}M</h4>
+                    <h4 class="font-medium text-xs lg:text-xl">${parseFloat((total_view / 1000).toFixed(2))}M</h4>
                   </div>
                   <div class="flex items-center gap-1">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
