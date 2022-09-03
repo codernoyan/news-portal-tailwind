@@ -8,6 +8,12 @@ const showCategories = async (categoryId, elementName) => {
     // news count
     const newsCount = document.getElementById('count-news');
     newsCount.innerText = categories.length;
+
+    console.log(categories);
+    // sort categories by total views
+    categories.sort(function (a, b) {
+      return b.total_view - a.total_view;
+    })
     
     // show alert message when no news found
     const alertMessage = document.getElementById('alert-message');
@@ -25,7 +31,6 @@ const showCategories = async (categoryId, elementName) => {
     categoriesContainer.innerHTML = '';
     categories.forEach(category => {
       console.log(category);
-
       // destructuring
       const { title, thumbnail_url, author, details, total_view, _id } = category;
 
