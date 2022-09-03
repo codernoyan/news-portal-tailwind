@@ -45,7 +45,7 @@
                     <p>The differences between <strong>var, let, and const</strong> variable declaration in JavaScript include:
                     Variables declared with var and const are scoped to the immediate function body.
                     Variables declared with the var keyword are hoisted. Hoisting means that the variable can be accessed in their enclosing scope even before they are declared.
-                    Variables declared with the let keyword are block-scoped, which means the variables will have scope to the immediate enclosing block.</p>
+                    Variables declared with the let keyword are block-scoped, which means the variables will have scope to the immediate enclosing block. Var is global scoped variable and let, const are block scoped variable. let and const points to data in memory that holds constant values, as the name implies. const reference variables cannot be reassigned to a different object in memory:</p>
                 </div>
               </div>
             </div>
@@ -59,7 +59,7 @@
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body py-4 px-5">
                     <p>
-                        In regular JavaScript functions, arguments keywords can be used to access the passed arguments when the function is invoked. But, arrow functions do not have their own arguments and it uses the arguments from the outer function
+                        In regular JavaScript functions, arguments keywords can be used to access the passed arguments when the function is invoked. But, arrow functions do not have their own arguments and it uses the arguments from the outer function. Inside of a regular JavaScript function, this value (aka the execution context) is dynamic. The dynamic context means that the value of this depends on how the function is invoked. In JavaScript, there are 4 ways you can invoke a regular function. The behavior of this inside of an arrow function differs considerably from the regular function's this behavior. The arrow function doesn't define its own execution context.
                     </p>
                 </div>
               </div>
@@ -74,11 +74,11 @@
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body py-4 px-5">
                   <p>
-                    The main difference between <strong>map</strong> and <strong>forEach</strong> is that the map method returns a new array by applying the callback function on each element of an array, while the forEach method doesn’t return anything.
+                    The main difference between <strong>map</strong> and <strong>forEach</strong> is that the map method returns a new array by applying the callback function on each element of an array, while the forEach method doesn't return anything. The forEach() method is used to loop through each element of an array or object. The <strong>forEach()</strong> method takes a callback function as an argument. The callback function is invoked for each element of the array or object. The <strong>map()</strong> method is used to loop through each element of an array or object. The <strong>map()</strong> method takes a callback function as an argument. The callback function is invoked for each element of the array or object.
                   </p>
                   <br>
                   <p>
-                    The <strong>find()</strong> method is used to find all the descendant elements of the selected element. It finds the element in the DOM tree by traversing through the root to leaf. The <strong>filter()</strong> method is used to filters all the elements and returns the element that matches and the element that do not match are removed
+                    The <strong>find()</strong> method is used to find all the descendant elements of the selected element. It finds the element in the DOM tree by traversing through the root to leaf. The <strong>filter()</strong> method is used to filters all the elements and returns the element that matches and the element that do not match are removed.
                   </p>
                 </div>
               </div>
@@ -92,7 +92,9 @@
               <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body py-4 px-5">
-                  <p><strong>Template strings</strong> are a powerful feature of modern JavaScript released in ES6. It lets us insert/interpolate variables and expressions into strings without needing to concatenate like in older versions of JavaScript. It allows us to create strings that are complex and contain dynamic elements. Template literals are enclosed by backtick (`) characters instead of double or single quotes.</p>
+                  <p>
+                    <strong>Template strings</strong> are a powerful feature of modern JavaScript released in ES6. It lets us insert/interpolate variables and expressions into strings without needing to concatenate like in older versions of JavaScript. It allows us to create strings that are complex and contain dynamic elements. Template literals are enclosed by backtick (`) characters instead of double or single quotes. Most notable features: A multiline string: a string that can span multiple lines, String formatting: the ability to substitute part of the string for the values of variables or expressions, This feature is also called string interpolation, HTML escaping: the ability to transform a string so that it is safe to include in HTML.
+                </p>
                 </div>
               </div>
             </div>
