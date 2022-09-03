@@ -29,9 +29,9 @@ const showCategories = async (categoryId) => {
                 <div class="p-6 flex flex-col justify-start">
                     <h5 class="text-gray-900 text-xl font-medium mb-2">${title}</h5>
                     <p class="text-gray-700 text-base mb-4">${details.slice(0, 350) + '...'}</p>
-                    <div class="grid grid-cols-4 justify-between items-center">
+                    <div class="grid grid-cols-2 lg:grid-cols-4 justify-between items-center">
 
-                  <div class="flex items-center gap-2">
+                    <div class="flex items-center gap-2">
                       <img src=${authorImg} class="w-11 h-auto rounded-full" alt="">
                     <div>
                       <h4 class="font-medium text-sm">${authorName}</h4>
