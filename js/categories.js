@@ -24,7 +24,6 @@ const showCategories = async (categoryId, elementName) => {
 
     const newsName = document.getElementById('item-name');
     newsName.innerText = elementName.innerText;
-    
 
     // display categories
     const categoriesContainer = document.getElementById('categories');
