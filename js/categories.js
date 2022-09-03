@@ -1,8 +1,9 @@
 const showCategories = async (categoryId) => {
-    const url = `https://openapi.programming-hero.com/api/news/category/${categoryId}`;
+  const url = `https://openapi.programming-hero.com/api/news/category/${categoryId}`;
+  try {
     const res = await fetch(url);
     const data = await res.json();
-    
+
     const categories = data.data;
     console.log(categories);
 
@@ -14,15 +15,15 @@ const showCategories = async (categoryId) => {
     const categoriesContainer = document.getElementById('categories');
     categoriesContainer.innerHTML = '';
     categories.forEach(category => {
-        console.log(category);
+      console.log(category);
 
-        // destructuring
-        const { title, thumbnail_url, author, details, total_view, _id } = category;
-        
-        const { img: authorImg, name: authorName } = author;
+      // destructuring
+      const { title, thumbnail_url, author, details, total_view, _id } = category;
 
-        const article = document.createElement('article');
-        article.innerHTML = `
+      const { img: authorImg, name: authorName } = author;
+
+      const article = document.createElement('article');
+      article.innerHTML = `
             <div class="flex justify-center mb-4">
             <div class="flex flex-col w-full md:flex-row md:max-w-xl lg:max-w-full rounded-lg bg-white shadow-lg">
                 <img class="w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" src=${thumbnail_url} alt="news" />
@@ -44,7 +45,7 @@ const showCategories = async (categoryId) => {
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>                      
                     </div>
-                    <h4 class="font-medium">${parseFloat((total_view/1000).toFixed(2))}M</h4>
+                    <h4 class="font-medium">${parseFloat((total_view / 1000).toFixed(2))}M</h4>
                   </div>
                   <div class="flex items-center gap-1">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -76,7 +77,18 @@ const showCategories = async (categoryId) => {
             </div>
         </div>
         `;
-        categoriesContainer.appendChild(article);
+      categoriesContainer.appendChild(article);
     })
+  } catch (error) {
+    console.log(error);
+  }
 }
 
+const toggleSpinner = (isLoading) => {
+  const spinner = document.getElementById('spinner');
+  if (isLoading) {
+    spinner.classList.remove('hidden');
+  } else {
+    spinner.classList.add('hidden');
+  }
+}
