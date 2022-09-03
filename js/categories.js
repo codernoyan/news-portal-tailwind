@@ -1,15 +1,16 @@
-const showCategories = async (categoryId) => {
+const showCategories = async (categoryId, elementName) => {
   const url = `https://openapi.programming-hero.com/api/news/category/${categoryId}`;
   try {
+    toggleSpinner(true);
     const res = await fetch(url);
     const data = await res.json();
-
     const categories = data.data;
-    console.log(categories);
-
     // news count
     const newsCount = document.getElementById('count-news');
     newsCount.innerText = categories.length;
+
+    const newsName = document.getElementById('item-name');
+    newsName.innerText = elementName.innerText;
 
     // display categories
     const categoriesContainer = document.getElementById('categories');
@@ -82,13 +83,5 @@ const showCategories = async (categoryId) => {
   } catch (error) {
     console.log(error);
   }
-}
-
-const toggleSpinner = (isLoading) => {
-  const spinner = document.getElementById('spinner');
-  if (isLoading) {
-    spinner.classList.remove('hidden');
-  } else {
-    spinner.classList.add('hidden');
-  }
+    toggleSpinner(false);
 }
