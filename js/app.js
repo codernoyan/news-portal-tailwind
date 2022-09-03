@@ -18,7 +18,7 @@ const showNewsCategories = async () => {
         console.log(category);
         const { category_name, category_id } = category;
         const li = document.createElement('li');
-        li.innerHTML = `<a onclick="showCategories('${category_id}', this)" class="cursor-pointer p-1 text-lg text-gray-500 hover:text-indigo-500 hover:bg-indigo-100">${category_name}</a>`;
+        li.innerHTML = `<a onclick="showCategories('${category_id}', this)" class="cursor-pointer p-1 text-sm lg:text-lg text-gray-500 hover:text-indigo-500 hover:bg-indigo-100">${category_name}</a>`;
         newsCategoryContainer.appendChild(li);
     })
 }
