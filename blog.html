@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Portal Assignment</title>
+  <!-- component library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+  <!-- tailwind css cdn link -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- tailwind config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body class="bg-gray-200">
+  <!-- navbar start -->
+  <header class="container mx-auto flex justify-between items-center my-4 px-2 lg:px-0">
+    <div>
+      <h1 class="font-sembold text-2xl"><span class="font-bold bg-indigo-500 text-white p-1">Zazeera</span> News</h1>
+    </div>
+    <div>
+      <ul class="flex gap-2">
+        <li><a class="font-medium text-indigo-500 underline decoration-indigo-500" href="index.html">News</a></li>
+        <li><a class="font-medium" href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+  </header>
+    <!-- navbar end -->
+  <main class="container mx-auto">
+    <div class="border-b-2 border-gray-300 my-6"></div>
+    <section>
+        <h1 class="text-3xl font-semibold underline decoration-indigo-500 mb-4">Blogs:</h1>
+        <!-- accordion -->
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item bg-white border border-gray-200">
+              <h2 class="accordion-header mb-0 font-medium" id="headingOne">
+                <button class="accordion-button relative flex items-center w-full py-4 px-5 text-base text-gray-800 text-leftbg-white border-0 rounded-none transition focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  What is the differences between Var, Let and Const in JavaScript?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body py-4 px-5">
+                    <p>The differences between <strong>var, let, and const</strong> variable declaration in JavaScript include:
+                    Variables declared with var and const are scoped to the immediate function body.
+                    Variables declared with the var keyword are hoisted. Hoisting means that the variable can be accessed in their enclosing scope even before they are declared.
+                    Variables declared with the let keyword are block-scoped, which means the variables will have scope to the immediate enclosing block.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-white border border-gray-200">
+              <h2 class="accordion-header mb-0 font-medium" id="headingTwo">
+                <button class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  What is the differences between Regular Function and Arrow Function in JavaScript?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body py-4 px-5">
+                    <p>
+                        In regular JavaScript functions, arguments keywords can be used to access the passed arguments when the function is invoked. But, arrow functions do not have their own arguments and it uses the arguments from the outer function
+                    </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-white border border-gray-200">
+              <h2 class="accordion-header mb-0 font-medium" id="headingThree">
+                <button class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  What is the differences between Map, ForEach, Filter and Find?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body py-4 px-5">
+                  <p>
+                    The main difference between <strong>map</strong> and <strong>forEach</strong> is that the map method returns a new array by applying the callback function on each element of an array, while the forEach method doesn’t return anything.
+                  </p>
+                  <br>
+                  <p>
+                    The <strong>find()</strong> method is used to find all the descendant elements of the selected element. It finds the element in the DOM tree by traversing through the root to leaf. The <strong>filter()</strong> method is used to filters all the elements and returns the element that matches and the element that do not match are removed
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-white border border-gray-200">
+              <h2 class="accordion-header mb-0 font-medium" id="headingFour">
+                <button class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                  Why are template strings used?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body py-4 px-5">
+                  <p><strong>Template strings</strong> are a powerful feature of modern JavaScript released in ES6. It lets us insert/interpolate variables and expressions into strings without needing to concatenate like in older versions of JavaScript. It allows us to create strings that are complex and contain dynamic elements. Template literals are enclosed by backtick (`) characters instead of double or single quotes.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+  </main>
+  <!-- tailwind elements script -->
+  <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+</body>
+
+</html>
